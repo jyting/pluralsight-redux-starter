@@ -28,7 +28,7 @@ class CoursesPage extends React.Component {
         <input type="submit"
           value="Add Course"
           className="btn btn-primary"
-          onClick={this.redirectToAddCoursePage} 
+          onClick={this.redirectToAddCoursePage}
         />
         <CourseList courses={courses}/>
       </div>
@@ -37,8 +37,8 @@ class CoursesPage extends React.Component {
 }
 
 CoursesPage.propTypes = {
-  actions: PropTypes.object.isRequired,
-  courses: PropTypes.array.isRequired
+  courses: PropTypes.array.isRequired,
+  actions: PropTypes.object.isRequired
 };
 
 function mapStateToProps(state, ownProps) {

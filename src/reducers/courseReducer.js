@@ -3,11 +3,6 @@ import initialState from './initialState';
 
 export default function courseReducer(state = initialState.courses, action) {
   switch(action.type) {
-    case types.CREATE_COURSE:
-      return [...state,
-        Object.assign({}, action.course)
-      ];
-
     case types.LOAD_COURSES_SUCCESS:
       return action.courses;
 
@@ -16,6 +11,11 @@ export default function courseReducer(state = initialState.courses, action) {
         ...state,
         Object.assign({}, action.course)
       ];
+
+      // case types.CREATE_COURSE:
+      // careturn [...state,
+      // ca  Object.assign({}, action.course)
+      // ca];
 
     case types.UPDATE_COURSE_SUCCESS:
       return [
